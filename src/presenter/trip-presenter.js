@@ -22,8 +22,8 @@ export default class TripPresenter {
 
 
     for (let i = 0; i < this.tripModel.getTrips().length; i++) {
-      const newTrip = new NewListItem({trip: this.tripModel.getTrips()[i]});
-      render(newTrip, this.tripEvents.getElement());
+      render(new NewListItem({trip: this.tripModel.getTrips()[i]}),
+        this.tripEvents.getElement());
     }
 
     render(new NewPoint({trip: this.tripModel.getTrips()[0]}), this.tripEvents.getElement());
