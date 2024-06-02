@@ -17,11 +17,12 @@ export default class PointPresenter {
   #mode = Mode.DEFAULT;
 
 
-  constructor({pointData, tripEvents, clickOnFavorite, closeForms}) {
+  constructor({pointData, tripEvents, clickOnFavorite, closeForms, dataChange}) {
     this.pointData = pointData;
     this.#tripEvents = tripEvents;
     this.#clickOnFavorite = clickOnFavorite;
     this.#closeForms = closeForms;
+    this.dataChange = dataChange;
   }
 
   init() {

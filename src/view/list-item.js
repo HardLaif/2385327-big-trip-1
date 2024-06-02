@@ -3,20 +3,20 @@ import AbstractView from '../framework/view/abstract-view.js';
 
 function createNewListItemTemplate(trip) {
 
-  const {basePrice, eventDate, eventTime, destination, isFavorite} = trip;
+  const {basePrice, dateFrom, dateTo, destination, isFavorite} = trip;
   return (
     `<li class="trip-events__item">
     <div class="event">
-      <time class="event__date" datetime="2019-03-18">${eventDate}</time>
+      <time class="event__date" datetime="2019-03-18">${dateFrom}</time>
       <div class="event__type">
         <img class="event__type-icon" width="42" height="42" src="img/icons/taxi.png" alt="Event type icon">
       </div>
       <h3 class="event__title">${destination}</h3>
       <div class="event__schedule">
         <p class="event__time">
-          <time class="event__start-time" datetime="2019-03-18T10:30">${eventTime}</time>
+          <time class="event__start-time" datetime="2019-03-18T10:30">${dateTo}</time>
           &mdash;
-          <time class="event__end-time" datetime="2019-03-18T11:00">${eventTime}</time>
+          <time class="event__end-time" datetime="2019-03-18T11:00">${dateTo}</time>
         </p>
         <p class="event__duration">30M</p>
       </div>
@@ -67,7 +67,6 @@ export default class NewListItem extends AbstractView{
   #clickHandler = (evt) => {
     evt.preventDefault();
     this.#handleClick();
-    console.log(evt)
   };
 
   #clickOnFavourite = (evt) => {

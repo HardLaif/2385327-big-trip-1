@@ -1,22 +1,83 @@
-const CITIES = ['moscow', 'vladimir', 'ivanovo', 'saint-petersburg'];
-export {CITIES};
+const TRIP_POINT_TYPES = [
+  'taxi',
+  'bus',
+  'train',
+  'ship',
+  'drive',
+  'flight',
+  'check-in',
+  'sightseeing',
+  'restaurant'
+];
+
+const DateFormat = {
+  MONTH_DAY: 'MMM D',
+  DAY_MONTH: 'D MMM',
+  HOURS_MINUTES: 'HH:mm',
+  DAYS: 'DD',
+  HOURS: 'HH',
+  MINUTES: 'mm',
+  MINUTE_DAY_JS: 'minute',
+  YEAR_MONTH_DAY: 'DD/MM/YY HH:mm',
+  MS_IN_MINUTE: 60000,
+  MINUTES_IN_HOUR: 60,
+  MINUTES_IN_DAY: 1440,
+};
 
 
-const COAST = ['30$', '40$', '50$', '60$'];
-export {COAST};
+const FilterType = {
+  EVERYTHING: 'everything',
+  FUTURE: 'future',
+  PRESENT: 'present',
+  PAST: 'past'
+};
 
-const PHOTO = ['https://loremflickr.com/248/152?random=1', 'https://loremflickr.com/248/152?random=2', 'https://loremflickr.com/248/152?random=3'];
-export {PHOTO};
+const SortType = {
+  DAY: 'day',
+  TIME: 'time',
+  PRICE: 'price',
+};
 
-const DESCRIPTION = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.', 'Fusce tristique felis at fermentum pharetra. Aliquam id orci ut lectus varius viverra. Nullam nunc ex, convallis sed finibus eget, sollicitudin eget ante.', 'Phasellus eros mauris, condimentum sed nibh vitae, sodales efficitur ipsum. Sed blandit, eros vel aliquam faucibus, purus ex euismod diam, eu luctus nunc ante ut dui. Sed sed nisi sed augue convallis suscipit in sed felis. Aliquam erat volutpat.'];
-export {DESCRIPTION};
+const UserAction = {
+  UPDATE_POINT: 'UPDATE_POINT',
+  ADD_POINT: 'ADD_POINT',
+  DELETE_POINT: 'DELETE_POINT',
+};
 
-const TYPE = ['taxi', 'bus', 'train', 'ship', 'drive', 'flight'];
-export {TYPE};
+const UpdateType = {
+  PATCH: 'PATCH',
+  MINOR: 'MINOR',
+  MAJOR: 'MAJOR',
+  INIT: 'INIT',
+};
 
-const DATE = ['17 JAN', '18 JAN', '19 JAN', '20 JAN'];
-export {DATE};
+const ApiMethod = {
+  GET: 'GET',
+  PUT: 'PUT',
+  POST: 'POST',
+  DELETE: 'DELETE'
+};
 
-const TIME = ['10:30', '12:00', '14:00'];
-export {TIME};
+const BaseUrl = {
+  POINTS: 'points',
+  DESTINATIONS: 'destinations',
+  OFFERS: 'offers',
+};
 
+
+const emptyPoint = {
+  basePrice: 0,
+  dateFrom: '',
+  dateTo: '',
+  destination: '',
+  isFavorite: false,
+  offers: [],
+  type: 'flight',
+};
+
+const TimeLimit = {
+  LOWER_LIMIT: 350,
+  UPPER_LIMIT: 1000,
+};
+
+export { TRIP_POINT_TYPES, DateFormat, FilterType, SortType, UserAction, UpdateType, ApiMethod, BaseUrl, emptyPoint, TimeLimit };
